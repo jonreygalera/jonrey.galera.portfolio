@@ -5,4 +5,8 @@
   --primary-light: #d0d8df;
 }
 
+body {
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+}
 

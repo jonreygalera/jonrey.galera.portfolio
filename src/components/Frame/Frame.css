@@ -1,0 +1,11 @@
+.portfolio-frame {
+  /* padding: 10px;
+  border: 1px solid var(--primary-light);
+  background-color: 'red';
+  border-radius: 10px; */
+  position: relative;
+  /* width: 150px;
+  height: 150px; */
+  border: 1px solid red;
+}
+

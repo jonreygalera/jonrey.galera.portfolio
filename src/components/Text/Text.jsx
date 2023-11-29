@@ -7,7 +7,7 @@ const Text = (props) => {
   const className = `portfolio-text ${variant}`;
 
   return (
-    <div className={className}>{children}</div>
+    <span className={className}>{children}</span>
   );
 }
 
