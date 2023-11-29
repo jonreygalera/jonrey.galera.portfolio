@@ -5,8 +5,12 @@
   --primary-light: #d0d8df;
 }
 
-body {
+.body-dark {
   background-color: var(--primary-dark);
   color: var(--primary-light);
 }
 
+.body-light {
+  background-color: var(--primary-light);
+  color: var(--primary-dark);
+}

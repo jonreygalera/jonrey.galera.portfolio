@@ -9,10 +9,14 @@ const Header = lazy(() => import('./features/Header'));
 
 function App() {
   const theme = useSelector((state) => state.uiStore.theme)
+  const bodyTag = document.querySelector('body');
 
   useEffect(() => {
     document.title = profileEnum.firstName;
-  }, []);
+    bodyTag.classList.remove(`body-dark`);
+    bodyTag.classList.remove(`body-light`);
+    bodyTag.classList.add(`body-${theme}`);
+  }, [theme]);
 
   return (
     <Container>
