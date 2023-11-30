@@ -9,7 +9,7 @@ const Frame = ({children , ...props}) => {
 
   return (
     <div className={className}>
-      <div className={childrenClassName}>{children}</div>
+      <div className={childrenClassName} {...others}>{children}</div>
     </div>
   );
 }

@@ -1,0 +1,14 @@
+.portfolio-gravatar {
+  overflow: hidden;
+}
+
+.portfolio-gravatar.outlined-circle {
+  border: 2px yellow solid;
+  border-radius: 50%;
+  background-color: green;
+}
+
+
+.portfolio-gravatar-image {
+  display: block;
+}

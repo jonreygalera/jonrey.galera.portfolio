@@ -7,7 +7,7 @@ const Alert = ({children , ...props}) => {
   const className = `portfolio-alert ${variant}`;
 
   return (
-    <span className={className}>{children}</span>
+    <span className={className} {...others}>{children}</span>
   );
 }
 

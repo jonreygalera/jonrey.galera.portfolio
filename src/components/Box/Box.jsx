@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import useScreenType from '../../hooks/useScreenType'
-import './Container.css'
+import './Box.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { setScreenType } from '../../utils/store/uiStore';
 
-const Container = ({ children, ...others}) => {
+const Box = ({ children, ...others}) => {
   const dispatch = useDispatch()
   const screenType = useScreenType()
-  const className = `portfolio-container`;
+  const className = `portfolio-box`;
 
   useEffect(() => {
     dispatch(setScreenType(screenType))
@@ -20,4 +20,4 @@ const Container = ({ children, ...others}) => {
   );
 }
 
-export default Container;
+export default Box;
