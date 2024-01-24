@@ -3,6 +3,7 @@ import useScreenType from '../../hooks/useScreenType'
 import './Container.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { setScreenType } from '../../utils/store/uiStore';
+import PropTypes from 'prop-types';
 
 const Container = ({ children, ...others}) => {
   const dispatch = useDispatch()
@@ -19,5 +20,14 @@ const Container = ({ children, ...others}) => {
     </div>
   );
 }
+
+Container.propTypes = {
+  variant: PropTypes.oneOf(['child']),
+  children: PropTypes.node.isRequired,
+};
+
+Container.defaultProps = {
+  variant: 'child',
+};
 
 export default Container;

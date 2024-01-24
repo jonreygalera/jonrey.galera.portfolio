@@ -5,7 +5,7 @@ import themeEnum from '../enums/themeEnum';
 import { useLocalStorage } from '../hooks/useStorage';
 import Button from '../components/Button/Button';
 
-const Header = () => {
+const ButtonTheme = () => {
   const theme = useSelector((state) => state.uiStore.theme)
   const dispatch = useDispatch()
   const [, setCurrentTheme] = useLocalStorage('theme', theme)
@@ -15,11 +15,7 @@ const Header = () => {
     setCurrentTheme(theme);
   }
 
-  return (
-    <div>
-      {/* <Button onClick={handleOnClickTheme}>Change Theme [ {theme} ]</Button> */}
-    </div>
-  );
+  return (<Button onClick={handleOnClickTheme}>[ {theme} ]</Button>);
 }
 
-export default Header;
+export default ButtonTheme;

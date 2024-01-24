@@ -12,7 +12,7 @@ const Text = (props) => {
 }
 
 Text.propTypes = {
-  variant: PropTypes.oneOf(['h1', 'h2', 'h3', 'body1', 'body2']),
+  variant: PropTypes.oneOf(['h1', 'h2', 'h3', 'body1', 'body2' ,'big', 'caption-medium']),
   children: PropTypes.node.isRequired,
 };
 

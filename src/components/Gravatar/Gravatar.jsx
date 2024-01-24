@@ -30,7 +30,7 @@ Gravatar.propTypes = {
 }
 
 Gravatar.defaultProps = {
-  size: 150,
+  size: 50,
   fallbackGravatar: 'random',
   variant: 'outlined-circle'
 }

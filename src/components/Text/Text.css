@@ -16,10 +16,19 @@
   font-weight: bold;
 }
 
+.portfolio-text.big {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
 .portfolio-text.body1 {
   font-size: 1rem;
 }
 
 .portfolio-text.body2 {
   font-size: 0.875rem;
+}
+
+.portfolio-text.caption-medium {
+  font-size: 1.875rem;
 }
