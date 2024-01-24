@@ -2,13 +2,13 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 export default function useTheme() {
-  const bodyTag = document.querySelector('body');
+  const documentElements = document.documentElement.classList;
   const theme = useSelector((state) => state.uiStore.theme);
-  
+
   useEffect(() => {
-    bodyTag.classList.remove(`body-dark`);
-    bodyTag.classList.remove(`body-light`);
-    bodyTag.classList.add(`body-${theme}`);
+    documentElements.remove(`dark`);
+    documentElements.remove(`light`);
+    documentElements.add(theme);
   }, [theme]);
 
   return theme;
