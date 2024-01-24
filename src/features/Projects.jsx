@@ -2,24 +2,28 @@ import React from 'react';
 import Box from '../components/Box';
 
 const PROJECT_LIST = [
-  { name: 'Project 1', description: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
-  { name: 'Project 1', description: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
-  { name: 'Project 1', description: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
-  { name: 'Project 1', description: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
-  { name: 'Project 1', description: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
-  { name: 'Project 1', description: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
-  { name: 'Project 1', description: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
-  { name: 'Project 1', description: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
-  { name: 'Project 1', description: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
-  { name: 'Project 1', description: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
-  { name: 'Project 1', description: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
-  { name: 'Project 1', description: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
+  { title: 'Project 1', content: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww', tags: ['php', 'js', 'laravel']},
+  { title: 'Project 2', content: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
+  { title: 'Project 3', content: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
+  { title: 'Project 4', content: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
+  { title: 'Project 5', content: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
+  { title: 'Project 6', content: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
+  { title: 'Project 7', content: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
+  { title: 'Project 8', content: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
+  { title: 'Project 9', content: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
+  { title: 'Project 10', content: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
+  { title: 'Project 11', content: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
+  { title: 'Project 12', content: 'loremmmmmmmmmmmmmmm  mmmmmmmmmmmmmmmmmm  mm mww'},
 ]
 
-const Projects = () => {
+const Projects = (props) => {
+  const { onClickProject } = props;
+
+  const handleOnClickProject = (data) => onClickProject(data);
+
   return (
     <Box classList='border border-1 border-black'>
-      <h3>Projects</h3>
+      <h1>Projects</h1>
       <hr/>
       <Box
         style={{
@@ -27,11 +31,13 @@ const Projects = () => {
           maxHeight: 100
         }}
       >
+        <ul>
         {
           PROJECT_LIST?.map((projectValue, projectIndex) => (
-            <span>projecy<br/></span>
+            <li><button onClick={() => handleOnClickProject(projectValue)}>{projectValue?.title}</button></li>
           ))
         }
+        </ul>
       </Box>
     </Box>
   );
